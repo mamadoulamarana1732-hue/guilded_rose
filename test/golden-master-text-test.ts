@@ -19,8 +19,8 @@ const gildedRose = new GildedRose(items);
 
 let days: number = 2;
 if (process.argv.length > 2) {
-    days = +process.argv[2];
-  }
+  days = +process.argv[2];
+}
 
 for (let i = 0; i < days + 1; i++) {
   console.log("-------- day " + i + " --------");
