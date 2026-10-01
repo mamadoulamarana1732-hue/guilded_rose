@@ -26,3 +26,15 @@ describe('Gilded Rose', () => {
     expect(item.quality).toBe(0);
   });
 });
+
+describe('Aged Brie', () => {
+  it('augmente sa qualité avec le temps', () => {
+    const item = updateOne('Aged Brie', 10, 20);
+    expect(item.quality).toBe(21);
+  });
+
+  it('augmente de 2 après la date de péremption', () => {
+    const item = updateOne('Aged Brie', 0, 20);
+    expect(item.quality).toBe(22);
+  });
+});
