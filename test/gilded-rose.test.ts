@@ -7,3 +7,13 @@ function updateOne(name: string, sellIn: number, quality: number): Item {
     gildedRose.updateQuality();
     return gildedRose.items[0];
 }
+
+describe('Gilded Rose', () => {
+    describe('Produit normal', () => {
+        it('diminue sellIn et quality de 1', () => {
+            const item = updateOne('Elixir', 10, 20);
+            expect(item.sellIn).toBe(9);
+            expect(item.quality).toBe(19);
+        });
+    });
+});
